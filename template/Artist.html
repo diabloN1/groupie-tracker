@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/globalStyles.css">
+    <link rel="stylesheet" href="/static/artistStyle.css" >
+    <title>Groupie-Tracker-Artist</title>
+</head>
+<body>
+    <center>
+        <div class="heading">
+            <h1 class="logo" onclick="window.location.href='/'">𝔊𝔯𝔬𝔲𝔭𝔦𝔢-𝔗𝔯𝔞𝔠𝔨𝔢𝔯</h1>
+        </div>
+        
+        <div class="card">
+            <div class="a">
+                <div class="b" style="text-align: center;">
+                    <h2>{{.Name}}</h2>
+                    <img src="{{.Image}}" alt="{{.Name}}" class="image"/>
+                </div>
+                <div class="b">
+                    <div class="a">
+                        <div class="b">
+                            <div class="info">
+                                <span class="label">Creation Date: </span>
+                                <span class="data">{{.CreationDate}}</span>
+                            </div>
+                            <div class="info">
+                                <span class="label">First Album: </span>
+                                <span class="data">{{.FirstAlbum}}</span>
+                            </div>
+                            <div class="info">
+                                <span class="label">Members:<br></span>
+                                <span class="data">{{range .Members}}{{.}}<br>{{end}}<br></span>
+                                <div class="info">
+                                    <span class="label">Dates:<br></span>
+                                    <span class="data">{{range .Dates}}{{.}}<br>{{end}}<br></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b">
+                            <div class="info">
+                                <span class="label">Location:<br></span>
+                                <span class="data">{{range .Locations}}{{.}}<br>{{end}}<br></span>
+                            </div>
+                            <div class="info">
+                                <span class="label">Relations:<br></span>
+                                <span class="data">{{range $key, $value := .Relations}}
+                                    <b>{{$key}}:</b><br> {{range $value}}{{.}}<br>{{end}}<br>
+                                {{end}}<br></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

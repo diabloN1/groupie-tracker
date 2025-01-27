@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Groupie-Tracker</title>
+    <link rel="stylesheet" href="/static/globalStyles.css">
+    <link rel="stylesheet" href="/static/homeStyle.css">
+</head>
+
+<body>
+    <center>
+        <div class="heading">
+            <div id="head">
+                <h1 class="logo">𝔊𝔯𝔬𝔲𝔭𝔦𝔢-𝔗𝔯𝔞𝔠𝔨𝔢𝔯</h1>
+                <input type="text" id="search" placeholder="Type to search..." list="searchExemples"/>
+                <datalist id="searchExemples"></datalist>
+                <button class="button1" id="toggleFilterButton"><i class="fa fa-filter"></i></button>
+            </div>
+        </div>
+        <div class="push">
+            <div class="filter" id="filterDiv" style="display: none;"> <!--style="display: none;" -->
+                <h3>Filters</h3>
+                <div>
+                    <strong>Creation Date: </strong>
+                    <span id="minValueCreation"></span> - <span id="maxValueCreation"></span>
+                    <div class="slider-styled" id="creationDateRange"></div>
+                </div>
+                <div>
+                    <strong>First Album: </strong>
+                    <span id="minValueAlbum"></span> - <span id="maxValueAlbum"></span>
+                    <div class="slider-styled" id="firstAlbumRange"></div>
+                </div>
+                <div>
+                    <strong>Number of Members</strong> <br>
+                    <div id="membersCountFilter"></div>
+                </div>
+                
+                <div>
+                    <strong>Locations</strong> <br>
+                    <select id="locationsFilter">
+                        <option value="All" selected>All</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="button2" onclick="reset()">Reset</button>
+                </div>
+            </div>
+
+        </div>
+       
+        
+        <div class="container">
+            {{range .}}
+            <div class="card">
+                <a href="/Artists?id={{.ID}}">
+                    <img src="{{.Image}}" alt="{{.Name}}" class="image" />
+                    <h3>{{.Name}}</h3>
+                </a>
+            </div>
+            {{end}}
+        </div>
+    </center>
+
+    <script type="application/json" id="artistData">
+    {{.}}
+    </script>
+    <!-- <script src="static/js/showResult.js"></script> -->
+    <script src="static/js/index.js"></script>
+    <!-- <script src="static/js/init.js"></script> -->
+</body>
+
+</html>

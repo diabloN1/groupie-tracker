@@ -1,0 +1,225 @@
+h3 {
+    font-size:35px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Container for cards */
+.container {
+    margin-top: 40px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card styling */
+.card {
+    height: 350px;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #333;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+}
+.card h3 {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+
+
+.push {
+    background-color: goldenrod;
+}
+.push.active {
+    background-color: goldenrod;
+}
+
+/* Range slider styling */
+.slider-styled {
+    margin: 8px 0;
+    height: 15px;
+    margin-bottom: 20px;
+}
+.slider-styled .noUi-connect {
+    background: #333;
+}
+.slider-styled .noUi-handle {
+    height: 16px;
+    width: 16px;
+    top: -1px;
+    right: -6px;
+    /* half the width */
+    border-radius: 50%;
+    background-color: #1c1c1c;
+}
+.slider-styled .noUi-connect {
+    background: #333;
+}
+.noUi-handle:before,
+.noUi-handle:after {
+    /* Hide middle line */
+    display: none;
+}
+
+button {
+    padding: 0.6rem 1rem;
+    font-size: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.button1:hover {
+    background: goldenrod;
+
+}
+.button2:hover {
+    color: #333;
+    font-size: 15px;
+    background-color: white;
+}
+
+/* Search input field */
+input[type="text"] {
+    padding: 10px;
+    margin: 15px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+input[type="text"]:focus {
+    border-color: goldenrod;
+}
+select, input[type="checkbox"] {
+    margin: 5px 0;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    gap: 1rem;
+    padding: 1rem;
+    width: 300px;
+    margin: 1rem auto;
+    height: auto;
+}
+#filterDiv {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 6s ease-in-out, opacity 6s linear;
+}
+#filterDiv.active {
+    max-height: 500px; /* Adjust based on your content */
+    opacity: 1;
+}
+
+/* #head {
+    background-color: #999;
+} */
+
+
+/* Style for the members count filter checkboxes */
+#membersCountFilter label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+#membersCountFilter input[type="checkbox"] {
+    margin-left: 8px;  /* Space between the checkbox and the label */
+    margin-right: 3px;  /* Space between the checkbox and the label */
+    margin-top: 10px;  /* Space between the checkbox and the label */
+    margin-bottom: 10px;
+}
+
+#suggestions {
+    margin: 0.5rem 0;
+}
+#locationsFilter {
+    margin: 10px 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+#search {
+    margin: 10px 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
+}
+
+/* Push Section */
+.push {
+    color: rgb(75, 75, 75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    background-color: darkgoldenrod;
+    z-index: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    
+}
+
+/* Active Push Section */
+.push.active {
+    transform: translate(-50%, -50%); /* Slide into view */
+    opacity: 0.7;
+    z-index: 0;
+    visibility: visible;
+}
+
+/* Bottom Section Animation (Container Moves Down) */
+.container.active {
+    transform: translateY(400px); /* Adjust height as needed */
+}
+
+a {
+    color: #000000;
+}

@@ -1,0 +1,39 @@
+/* General body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+}
+
+/* Header section */
+.heading {  
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Logo styling */
+.logo {
+    color: goldenrod;
+    font-size: 55px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 0 #ccc,         
+                 3px 3px 0 #444, 
+                 4px 4px 0 #444, 
+                 5px 5px 0 #444, 
+                 6px 6px 0 #444, 
+                 5px 5px 15px #999;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
