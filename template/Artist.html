@@ -6,14 +6,25 @@
     <link rel="stylesheet" href="/static/globalStyles.css">
     <link rel="stylesheet" href="/static/artistStyle.css" >
     <title>Groupie-Tracker-Artist</title>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCZo1QhDwC35nWDcVXIz2G6xeQDGY17LY&callback=initMap&libraries=marker&v=weekly" 
+    loading=async
+    defer >
+    </script>
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
 </head>
 <body>
     <center>
         <div class="heading">
             <h1 class="logo" onclick="window.location.href='/'">𝔊𝔯𝔬𝔲𝔭𝔦𝔢-𝔗𝔯𝔞𝔠𝔨𝔢𝔯</h1>
         </div>
-        
         <div class="card">
+        <div id="map"></div>
             <div class="a">
                 <div class="b" style="text-align: center;">
                     <h2>{{.Name}}</h2>
@@ -56,5 +67,17 @@
             </div>
         </div>
     </center>
+
+
+    <script>
+
+        
+      </script>
+
+
+    <script type="application/json" id="artistData">
+        {{.}}
+    </script>
+    <script src="static/js/geo.js"></script>
 </body>
 </html>

@@ -112,7 +112,7 @@ func interfaceToStringSlice(input any) []string {
 
 // -------------- HTML error template --------------
 func isAllowedRounte(path string) bool {
-	allowedRoutes := []string{"/artistStyle.css", "/errStyle.css", "/globalStyles.css", "/homeStyle.css", "folder.png", "index.js", "init.js", "showResult.js"}
+	allowedRoutes := []string{"/artistStyle.css", "/errStyle.css", "/globalStyles.css", "/homeStyle.css", "folder.png", "index.js", "geo.js"}
 	for i := range allowedRoutes {
 		if strings.HasSuffix(path, allowedRoutes[i]) {
 			return true
